@@ -1,4 +1,4 @@
-function [dD_dt] = rhs_D(drug_present, drug_eqn, x, t)
+function [dD_dt] = rhs_D(x, t)
     params = init_params(drug_present, drug_eqn);
     p = params(7);
     q = params(8);

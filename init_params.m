@@ -19,7 +19,7 @@ K2 = l^2;
 param_out(3) = K2;
 
 if drug_present == 1
-    d_drug = 0.75;
+    d_drug = 0.005;
     d = d_drug;
 elseif drug_present == 0
     d = 0;
@@ -27,7 +27,7 @@ end
 param_out(4) = d;
 
 
-resistance_cost = 0.2;
+resistance_cost = 0.5;
 r2 = r1*(1-resistance_cost);
 param_out(5) = r2;
 
