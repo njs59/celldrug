@@ -13,13 +13,13 @@ l = grid_size;
 r1 = 0.027;
 param_out(1) = r1;
 
-K1 = 6*l^2;
+K1 = l^2;
 param_out(2) = K1;
-K2 = 4*l^2;
+K2 = 2*l^2;
 param_out(3) = K2;
 
 if drug_present == 1
-    d_drug = 0.022;
+    d_drug = 0.028;
     d = d_drug;
 elseif drug_present == 0
     d = 0;
