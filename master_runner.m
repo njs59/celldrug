@@ -4,7 +4,7 @@ drug_present = 1;
 
 % res_drug_death 0 for no death in resistant population due to drug, 1 for
 % death in resistant population due to drug
-res_drug_death = 1;
+res_drug_death = 0;
 
 % drug_eqn if 0 then we have a constant amount of drug if 1 then dynamic amount of drug 
 drug_eqn = 0;
@@ -13,7 +13,7 @@ drug_eqn = 0;
 if drug_eqn == 1
     x0 = [100, 10, 100];
 else
-    x0 = [10,10];
+    x0 = [80,10];
 end
 
 
