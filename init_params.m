@@ -15,7 +15,7 @@ param_out(1) = r1;
 
 K1 = l^2;
 param_out(2) = K1;
-K2 = 4*l^2;
+K2 = l^2;
 param_out(3) = K2;
 
 if drug_present == 1
@@ -38,7 +38,7 @@ param_out(7) = K4;
 
 if drug_present == 1 && res_drug_death
     % d_drug = 0.022;
-    res_power = 0.9;
+    res_power = 0.5;
     d2 = res_power * d_drug;
 else 
     d2 = 0;
