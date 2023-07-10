@@ -34,7 +34,7 @@ resistance_cost = 0.5;
 r2 = r1*(1-resistance_cost);
 param_out(6) = r2;
 
-alpha21 = 4;
+alpha21 = 2;
 param_out(7) = alpha21;
 
 K3 = l^2;
@@ -61,7 +61,7 @@ end
 delta1 = 1 - d1/r1;
 delta2 = 1 - d2/r2;
 
-c1_hat = (1/alpha12)*(delta1) - delta2;
+c1_hat = (1/alpha12)*delta1 - delta2;
 c2_hat = delta1 - (1/alpha21)*delta2;
 
 disp('c hat values')
