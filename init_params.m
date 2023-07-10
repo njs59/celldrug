@@ -13,28 +13,34 @@ l = grid_size;
 r1 = 0.027;
 param_out(1) = r1;
 
+alpha12 = 2;
+param_out(2) = alpha12;
+
 K1 = l^2;
-param_out(2) = K1;
+param_out(3) = K1;
 K2 = l^2;
-param_out(3) = K2;
+param_out(4) = K2;
 
 if drug_present == 1
-    d_drug = 0.02;
+    d_drug = 0.022;
     d1 = d_drug;
 elseif drug_present == 0
     d1 = 0;
 end
-param_out(4) = d1;
+param_out(5) = d1;
 
 
 resistance_cost = 0.5;
 r2 = r1*(1-resistance_cost);
-param_out(5) = r2;
+param_out(6) = r2;
+
+alpha21 = 4;
+param_out(7) = alpha21;
 
 K3 = l^2;
-param_out(6) = K3;
+param_out(8) = K3;
 K4 = l^2;
-param_out(7) = K4;
+param_out(9) = K4;
 
 if drug_present == 1 && res_drug_death
     % d_drug = 0.022;
@@ -43,13 +49,23 @@ if drug_present == 1 && res_drug_death
 else 
     d2 = 0;
 end
-param_out(8) = d2;
+param_out(10) = d2;
 
 if drug_eqn == 1
     p = 0.02;
-    param_out(9) = p;
+    param_out(11) = p;
     q = 0.01;
-    param_out(10) = q;
+    param_out(12) = q;
 end
+
+delta1 = 1 - d1/r1;
+delta2 = 1 - d2/r2;
+
+c1_hat = (1/alpha12)*(delta1) - delta2;
+c2_hat = delta1 - (1/alpha21)*delta2;
+
+disp('c hat values')
+disp(c1_hat)
+disp(c2_hat)
 
 end
