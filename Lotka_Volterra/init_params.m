@@ -48,7 +48,7 @@ param_out(8) = K3;
 %K4 = l^2;
 param_out(9) = K4;
 
-if drug_present == 1 && res_drug_death
+if drug_present == 1 && res_drug_death == 1
     % d_drug = 0.022;
     res_power = 0.5;
     d2 = res_power * d_drug;
