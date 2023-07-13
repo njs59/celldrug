@@ -13,13 +13,13 @@ drug_eqn = 0;
 if drug_eqn == 1
     x0 = [100, 10, 1, 100];
 else
-    x0 = [90,5, 1];
+    x0 = [10,10, 0];
 end
 
 
 %% Running of solver
 tmin = 0;
-tmax = 1000;
+tmax = 400;
 tspan = [tmin tmax];
 
 
