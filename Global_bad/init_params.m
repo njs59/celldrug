@@ -16,10 +16,10 @@ if drug_present == 1
 end
 param_out(2) = d1;
 
-d2 = 0.000555;
+d2 = 0.0012;
 param_out(3) = d2;
 
-resistance_cost = 0.1;
+resistance_cost = 0.25;
 r2 = r1*(1-resistance_cost);
 %r2 = r1;
 %r2 = 0.025;
@@ -34,7 +34,7 @@ if drug_present == 1 && res_drug_death == 1
 end
 param_out(5) = d3;
 
-d4 = 0.0005;
+d4 = 0.001;
 param_out(6) = d4;
 
 a = 0.1;

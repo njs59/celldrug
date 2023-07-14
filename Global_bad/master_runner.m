@@ -29,9 +29,10 @@ tspan = [tmin tmax];
 
 figure(1)
 plot(t,x(:,1), t,x(:,2), t,x(:,3))
+legend('Susceptible cells', 'Resistant cells', 'Excess Acid concentration')
 
-%store_S = zeros(89,5);
-%store_S(:,5) = x(:,1);
+store_S = zeros(61,5);
+store_S(:,1) = x(:,1);
 %figure(2)
 %style= {'-k','--b',':y'};
 %hold on
