@@ -1,6 +1,6 @@
 %% Set-up
 % drug_present 0 for no drug 1 for drug
-drug_present = 0;
+drug_present = 1;
 
 % res_drug_death 0 for no death in resistant population due to drug, 1 for
 % death in resistant population due to drug
@@ -29,7 +29,7 @@ tspan = [tmin tmax];
 
 figure(1)
 plot(t,x(:,1), t,x(:,2), t,x(:,3))
-legend('Susceptible cells', 'Resistant cells', 'Excess Acid concentration')
+legend('Susceptible cells', 'Resistant cells', 'Excess Acid concentration', Location='best')
 
 store_S = zeros(61,5);
 store_S(:,1) = x(:,1);
