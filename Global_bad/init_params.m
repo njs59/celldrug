@@ -5,18 +5,18 @@ no_params = 8;
 
 param_out = zeros(no_params,1); 
 
-r1 = 0.027;
+r1 = 0.025;
 param_out(1) = r1;
 
 d1 = 0;
-drug_effect = 0.002;
+drug_effect = 0.001;
 
 if drug_present == 1
     d1 = d1 + drug_effect;
 end
 param_out(2) = d1;
 
-d2 = 0.001;
+d2 = 0.00105;
 param_out(3) = d2;
 
 resistance_cost = 0;
@@ -34,12 +34,12 @@ if drug_present == 1 && res_drug_death == 1
 end
 param_out(5) = d3;
 
-d4 = 0.001;
+d4 = 0.0008;
 param_out(6) = d4;
 
-a = 0.1;
+a = 0.05;
 param_out(7) = a;
-b = 0.1;
+b = 0.05;
 param_out(8) = b;
 
 

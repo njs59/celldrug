@@ -13,13 +13,13 @@ drug_eqn = 0;
 if drug_eqn == 1
     x0 = [100, 10, 1, 100];
 else
-    x0 = [10,10, 5];
+    x0 = [15,0, 0];
 end
 
 
 %% Running of solver
 tmin = 0;
-tmax = 400;
+tmax = 72;
 tspan = [tmin tmax];
 
 
@@ -31,8 +31,8 @@ figure(1)
 plot(t,x(:,1), t,x(:,2), t,x(:,3))
 legend('Susceptible cells', 'Resistant cells', 'Excess Acid concentration', Location='best')
 
-store_S = zeros(61,5);
-store_S(:,1) = x(:,1);
+%store_S = zeros(61,5);
+%store_S(:,1) = x(:,1);
 %figure(2)
 %style= {'-k','--b',':y'};
 %hold on
