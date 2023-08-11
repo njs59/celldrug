@@ -9,7 +9,7 @@ r1 = 0.025;
 param_out(1) = r1;
 
 d1 = 0;
-drug_effect = 0.001;
+drug_effect = 0.00139;
 
 if drug_present == 1
     d1 = d1 + drug_effect;
@@ -27,7 +27,7 @@ param_out(4) = r2;
 
 
 d3 = 0;
-drug_effect_R = 0.001;
+drug_effect_R = 0.00;
 
 if drug_present == 1 && res_drug_death == 1
     d3 = d3 + drug_effect_R;
