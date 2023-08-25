@@ -23,7 +23,7 @@ df = df.drop('DrugDose', axis=1)
 df = df.drop('WellId', axis=1)
 df = df[df['Time'] <= 72]
 
-#df.to_csv('exp1_data_clipped.csv') 
+df.to_csv('exp1_data_clipped.csv') 
 
 # df2 = pd.read_csv("exp1_data_mono.csv",index_col=0)
 
@@ -41,10 +41,10 @@ print(length)
 #length = df2.shape[0]
 #print(length)
 
-iters = math.floor(length/4, 'int')
+# iters = math.floor(length/4)
 
-df3 = pd.DataFrame()
-for i in range(iters):
-    df3[i] = df3[4*i]
+# df3 = pd.DataFrame()
+# for i in range(iters):
+#     df3[i,:] = df[4*i,:]
 
-df3.to_csv('test1.csv')
+# df3.to_csv('test1.csv')

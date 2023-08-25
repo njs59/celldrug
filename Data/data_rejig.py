@@ -41,10 +41,12 @@ print(length)
 #length = df2.shape[0]
 #print(length)
 
-iters = math.floor(length/4, 'int')
+iters = math.floor(length/4)
+print(iters)
 
 df3 = pd.DataFrame()
 for i in range(iters):
-    df3[i] = df3[4*i]
+    print('Hi')
+    df3[i,:] = df[4*i,:]
 
 df3.to_csv('test1.csv')

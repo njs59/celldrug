@@ -25,7 +25,7 @@ mono_culture_green = mono_culture(14:26,1);
 if drug_eqn == 1
     x0 = [100, 10, 1, 100];
 else
-    x0 = [9,1, 0];
+    x0 = [9,6, 0];
 end
 
 
