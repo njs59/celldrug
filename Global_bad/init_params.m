@@ -5,11 +5,15 @@ no_params = 8;
 
 param_out = zeros(no_params,1); 
 
-r1 = 0.025;
+%multiple = 3.5;
+multiple = 1;
+
+r1 = multiple*0.025;
 param_out(1) = r1;
 
 d1 = 0;
-drug_effect = 0.00139;
+drug_effect = multiple*0.00139;
+%drug_effect = 0.0005;
 
 if drug_present == 1
     d1 = d1 + drug_effect;

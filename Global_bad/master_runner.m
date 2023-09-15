@@ -25,7 +25,8 @@ mono_culture_green = mono_culture(14:26,1);
 if drug_eqn == 1
     x0 = [100, 10, 1, 100];
 else
-    x0 = [9,1, 0];
+    x0 = [7,5.5, 0];
+    %x0 = [9,1,0];
 end
 
 
@@ -40,16 +41,25 @@ tspan = [tmin tmax];
 [t,x] = ode45(@(t,x) cell_drug(t, x, drug_present, res_drug_death, drug_eqn), tspan, x0);
 
 figure(1)
-plot(t,x(:,1), t,x(:,2), t,x(:,3))
-legend('Susceptible cells', 'Resistant cells', 'Excess Acid concentration', 'Location','best')
+plot(t,x(:,1),LineWidth=1.5)
+hold on
+plot(t,x(:,2),LineWidth=1.5)
+plot(t,x(:,3),LineWidth=1.5)
+hold off
+fontsize(12,"points")
+xlabel('Time (hours)');
+ylabel('Confluence');
 
-%hold on 
-%plot(time, co_culture_green,'g')
-%plot(time, co_culture_red, 'r')
+
+hold on 
+%plot(time, co_culture_green,'g',Marker='x',LineWidth=1.25,LineStyle=':')
+%plot(time, co_culture_red, 'r',Marker='x',LineWidth=1.25,LineStyle=':')
+legend('Susceptible cells', 'Resistant cells', 'Excess Acid concentration', ...
+    'Experimental Susceptible', 'Experimental Resistant', 'Location','best')
 
 %plot(time, mono_culture_green,'g')
 %plot(time, mono_culture_red, 'r')
-%hold off
+hold off
 
 
 %store_S = zeros(61,5);
